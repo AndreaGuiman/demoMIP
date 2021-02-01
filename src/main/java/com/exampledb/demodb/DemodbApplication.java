@@ -1,7 +1,6 @@
 package com.exampledb.demodb;
 
 import com.exampledb.demodb.model.Users;
-import com.exampledb.demodb.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -20,8 +19,6 @@ public class DemodbApplication {
 
 //        UserService userApi = new UserService();
 //        System.out.println(userApi.getAllUsers());
-//
-
 
     }
 
