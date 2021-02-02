@@ -22,7 +22,11 @@ public class UserConfig {
                     "secondUser",
                     "secondUserPass"
             );
-            userRepository.saveAll(List.of(firstUser, secondUser));
+            Users thirdUser = new Users(
+                    "user",
+                    "pass"
+            );
+            userRepository.saveAll(List.of(firstUser, secondUser, thirdUser));
         };
     }
 }

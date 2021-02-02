@@ -6,10 +6,16 @@ import java.util.Objects;
 @Entity
 public class Users {
     @Id
+    @Column(name = "idUser")
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer idUser;
 
+    @Basic
+    @Column(name = "username")
     private String username;
+
+    @Basic
+    @Column(name = "password")
     private String password;
 
     public Users() {
@@ -20,18 +26,10 @@ public class Users {
         this.password = password;
     }
 
-    public Users(Integer idUser, String username, String password) {
-        this.idUser = idUser;
-        this.username = username;
-        this.password = password;
-    }
-
     public Integer getIdUser() {
         return idUser;
     }
 
-    @Basic
-    @Column(name = "username")
     public String getUsername() {
         return username;
     }
@@ -40,8 +38,6 @@ public class Users {
         this.username = username;
     }
 
-    @Basic
-    @Column(name = "password")
     public String getPassword() {
         return password;
     }

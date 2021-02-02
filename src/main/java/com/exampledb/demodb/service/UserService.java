@@ -59,4 +59,18 @@ public class UserService {
     public Users find(Integer idUser){
         return userRepository.findById(idUser).get();
     }
+
+    public boolean findUsername(String username){
+        if(userRepository.findUsersByUsername(username).isPresent()){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean findPassword(String password){
+        if(userRepository.findUsersByPassword(password).isPresent()){
+            return true;
+        }
+        return false;
+    }
 }
